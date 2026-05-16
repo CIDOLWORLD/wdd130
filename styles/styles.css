@@ -1,108 +1,95 @@
 /* Global Reset */
 * {
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styling */
+/* Body */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     background-color: #f5f5f5;
     color: #222;
-    padding: 20px;
+    line-height: 1.6;
 }
 
-/* Header and Footer */
-header,
-footer {
+/* Navigation */
+nav {
     background-color: #333;
-    color: #fff;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+/* Main */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Heading */
+h1 {
+    color: #222;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Main Image */
+main img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #ccc;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Aside */
+aside {
+    width: 250px;
+    margin: 20px auto;
+    border: 1px solid #222;
+    padding: 15px;
+    background-color: #ddd;
+    color: #000;
+}
+
+/* Aside Image */
+aside img {
+    width: 200px;
+    height: auto;
+}
+
+/* Paragraph */
+p {
+    padding: 0;
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    border-top: 1px solid #000;
     text-align: center;
     padding: 20px;
-    border-top: 1px solid #000;
-    width: 100%;
 }
 
-/* Main Content Container */
-main,
-section {
-    max-width: 800px;
-    width: 100%;
-    margin: 20px auto;
-    padding: 15px;
-}
-
-/* Headings */
-h1 {
-    text-align: center;
-    margin-bottom: 15px;
-    font-size: 2rem;
-}
-
-h2 {
-    border: 1px solid #222;
-    text-align: center;
-    padding: 10px;
-    margin-bottom: 15px;
-    font-size: 1.5rem;
-}
-
-/* Paragraphs */
-p,
-section p {
-    margin: 1rem 0;
-    text-align: center;
-    font-size: 1rem;
-}
-
-/* Images */
-main img,
-img {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 8px;
-}
-
-/* Small Devices */
+/* Responsive Design */
 @media (max-width: 768px) {
-    body {
+    main {
         padding: 10px;
     }
 
-    h1 {
-        font-size: 1.6rem;
+    aside {
+        width: 100%;
     }
 
-    h2 {
-        font-size: 1.2rem;
-    }
-
-    p {
-        font-size: 0.95rem;
-    }
-}
-
-/* Extra Small Devices */
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.3rem;
-    }
-
-    h2 {
-        font-size: 1rem;
-    }
-
-    p {
-        font-size: 0.9rem;
-    }
-
-    header,
-    footer {
-        padding: 15px;
+    aside img {
+        width: 100%;
+        max-width: 200px;
     }
 }
