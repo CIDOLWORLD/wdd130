@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    
+header,footer {
+    background-color: #333;
+    color: #fff;
+    margin-top: 150px;
+    border-top: 1px solid #000;
+    text-align: center;
+
+}
+main {
+    max-width: 840px;
+    margin: 0 auto;           /* centers the main content */
+}
+
+aside {
+    width: 20rch;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #eee;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.2); /* more compatible */
+}
+
+aside img,
+main img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;   /* prevents overflow */
+}
+
+p {
+    padding: 0;
+    margin: 1rem 0;    /* usually helpful */
+}
+
+header,
+footer {
+    background-color: #333;
+    color: #fff;
+    margin-top: 150px;
+    border-top: 1px solid #000;
+    text-align: center;
+}
