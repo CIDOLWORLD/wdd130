@@ -1,0 +1,179 @@
+/* rafting.css */
+
+:root {
+    ---primary-color: #055a05;
+    --secondary-color: #f4a261;
+    --accent1-color: #264653;
+    --accent2-color: #e9c46a;
+    --heading-font: "Times New Roman", "Georgia", serif;
+    --body-font: Arial, Helvetica, sans-serif;
+}
+
+/* CSS Reset */
+header {
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: var(--body-font);
+    color: var(--accent1-color);
+}
+
+/* Page Width */
+header,
+main,
+footer {
+    width: 840px;
+    margin: 0 auto;
+}
+
+/* Header Layout */
+header {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    align-items: center;
+    background-color: var(--secondary-color);
+    padding: 20px;
+}
+
+header img {
+    width: 120px;
+    height: auto;
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    color: var(--accent2-color);
+}
+
+/* Headings */
+h1,
+h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+/* Shared Spacing */
+nav,
+p,
+section,
+article {
+    margin: 16px;
+    padding: 8px;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Hero Heading Overlay */
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+
+    background-color: rgba(38, 70, 83, 0.8);
+    color: white;
+
+    font-size: 2.5rem;
+}
+
+/* Hero Article Overlay */
+.hero article {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+}
+
+/* Article Image */
+.hero article img {
+    float: right;
+    width: 125px;
+    margin-left: 15px;
+    border: 3px solid var(--secondary-color);
+    border-radius: 8px;
+}
+
+/* Sections */
+section {
+    background-color: white;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+section p {
+    line-height: 1.6;
+}
+
+/* Empty Adventure Section Height */
+section:last-of-type {
+    height: 180px;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--secondary-color);
+    color: white;
+
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Social Media Icons */
+.socialmedia {
+    display: flex;
+    gap: 15px;
+}
+
+.socialmedia a {
+    text-decoration: none;
+}
+
+.socialmedia img {
+    width: 40px;
+    height: auto;
+}
