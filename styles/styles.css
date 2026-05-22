@@ -1,95 +1,138 @@
 /* Global Reset */
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 /* Body */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
+    color: #222;
+    background-color: #f9f9f9;
 }
 
 /* Navigation */
 nav {
     background-color: #333;
-    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
 }
 
 nav a {
     color: white;
-    padding: 10px;
-    display: block;
     text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease;
 }
 
-/* Main */
+nav a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Main Layout */
 main {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 900px;
+    margin: 20px auto;
     padding: 20px;
+    background-color: white;
 }
 
 /* Heading */
 h1 {
-    color: #222;
     text-align: center;
     margin-bottom: 20px;
+    color: #222;
 }
 
 /* Main Image */
 main img {
-    width: 100%;
+    float: right;
+    width: 200px;
     height: auto;
-    border: 2px solid #ccc;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
     padding: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Aside */
-aside {
-    width: 250px;
-    margin: 20px auto;
-    border: 1px solid #222;
-    padding: 15px;
+/* Paragraphs */
+p {
+    margin: 15px 0;
+}
+
+/* Reusable Box Style */
+.box {
+    margin: 20px 0;
+    border: 1px solid rgb(0 0 0 / 10%);
+    padding: 20px;
     background-color: #ddd;
-    color: #000;
+    border-radius: 8px;
+}
+
+/* Aside Section */
+aside {
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+aside h2 {
+    margin-bottom: 15px;
 }
 
 /* Aside Image */
 aside img {
-    width: 200px;
+    width: 100%;
+    max-width: 400px;
     height: auto;
+    border-radius: 8px;
 }
 
-/* Paragraph */
-p {
-    padding: 0;
+/* List Styling */
+ul {
+    padding-left: 20px;
+}
+
+ul li {
     margin: 10px 0;
 }
 
 /* Footer */
 footer {
-    margin-top: 20px;
-    border-top: 1px solid #000;
+    margin-top: 30px;
+    border-top: 1px solid #ccc;
     text-align: center;
     padding: 20px;
+    background-color: #f1f1f1;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main img {
+        float: none;
+        display: block;
+        margin: 0 auto 20px;
+    }
+
     main {
-        padding: 10px;
+        padding: 15px;
     }
 
     aside {
         width: 100%;
-    }
-
-    aside img {
-        width: 100%;
-        max-width: 200px;
+        padding: 10px;
     }
 }
