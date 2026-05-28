@@ -1,19 +1,18 @@
-/* rafting.css */
+/* ===== ROOT VARIABLES ===== */
 
 :root {
-    ---primary-color: #055a05;
-    --secondary-color: #f4a261;
+    --primary-color: #1b4332;
+    --secondary-color: #9d7cd8;
     --accent1-color: #264653;
-    --accent2-color: #e9c46a;
-    --heading-font: "Times New Roman", "Georgia", serif;
+    --accent2-color: #f1faee;
+
+    --heading-font: Georgia, serif;
     --body-font: Arial, Helvetica, sans-serif;
+
+    --max-width: 1200px;
 }
 
-/* CSS Reset */
-header {
-    background-color: var(--primary-color);
-    color: var(--accent2-color);
-}
+/* ===== RESET ===== */
 
 * {
     margin: 0;
@@ -21,165 +20,266 @@ header {
     box-sizing: border-box;
 }
 
-/* Body Styling */
+/* ===== BODY ===== */
+
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
+    background-color: #f8f9fa;
+    line-height: 1.6;
 }
 
-/* Page Width */
+/* ===== LAYOUT ===== */
+
 header,
 main,
 footer {
-    width: 840px;
+    width: 100%;
+    max-width: var(--max-width);
     margin: 0 auto;
 }
 
-/* Header Layout */
-header {
+/* ===== HEADER ===== */
+
+.site-header {
     display: grid;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 120px 1fr;
     align-items: center;
+
     background-color: var(--secondary-color);
-    padding: 20px;
+
+    padding: 1rem 2rem;
+    gap: 2rem;
 }
 
-header img {
-    width: 120px;
+.logo {
+    width: 100px;
     height: auto;
 }
 
-/* Navigation */
-nav ul {
+/* ===== NAVIGATION ===== */
+
+.navigation {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
+    gap: 1rem;
     list-style: none;
 }
 
-nav a {
+.navigation a {
     text-decoration: none;
     color: white;
+
+    background-color: rgba(255,255,255,0.1);
+
+    padding: 0.75rem 1.25rem;
+    border-radius: 5px;
+
     font-weight: bold;
-    font-size: 1.1rem;
+
+    transition: all 0.3s ease;
 }
 
-nav a:hover {
-    color: var(--accent2-color);
-}
-
-/* Headings */
-h1,
-h2 {
-    font-family: var(--heading-font);
+.navigation a:hover,
+.navigation .active {
+    background-color: white;
     color: var(--primary-color);
 }
 
-/* Shared Spacing */
-nav,
-p,
-section,
-article {
-    margin: 16px;
-    padding: 8px;
-}
+/* ===== HERO ===== */
 
-/* Hero Section */
 .hero {
     position: relative;
-    width: 100%;
-    height: 500px;
-    /* Adjust height as needed */
+    height: 550px;
     overflow: hidden;
 }
 
-.hero img {
+.hero-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Makes the image cover the entire div */
-    display: block;
 }
 
-/* Hero Heading Overlay */
-.hero h1 {
+.hero-content {
     position: absolute;
-    top: 20px;
-    width: 100%;
-    padding: 16px;
-    text-align: center;
+    inset: 0;
 
-    background-color: rgba(38, 70, 83, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    padding: 2rem;
+}
+
+.hero h1 {
+    text-align: center;
+    font-size: 3rem;
     color: white;
+
+    margin-bottom: 2rem;
+
+    font-family: var(--heading-font);
+}
+
+.hero article {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    background-color: rgba(255,255,255,0.9);
+
+    padding: 1.5rem;
+
+    border-radius: 10px;
+}
+
+.hero article img {
+    width: 160px;
+    border-radius: 10px;
+}
+
+/* ===== HISTORY ===== */
+
+.history {
+    padding: 4rem 2rem;
+    background-color: white;
+}
+
+.history h2 {
+    text-align: center;
+    margin-bottom: 2rem;
 
     font-size: 2.5rem;
 }
 
-/* Hero Article Overlay */
-.hero article {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
+.history-grid {
+    display: grid;
+    grid-template-columns: 1fr 250px 1fr;
+    gap: 2rem;
+    align-items: center;
 }
 
-/* Article Image */
-.hero article img {
-    float: right;
-    width: 125px;
-    margin-left: 15px;
-    border: 3px solid var(--secondary-color);
-    border-radius: 8px;
+.history-grid img {
+    width: 100%;
+    border-radius: 10px;
 }
 
-/* Sections */
-section {
-    background-color: white;
-    margin-top: 20px;
-    padding: 20px;
+/* ===== GALLERY ===== */
+
+.gallery {
+    padding: 4rem 2rem;
 }
 
-section h2 {
+.gallery h2 {
     text-align: center;
-    margin-bottom: 15px;
-    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
 }
 
-section p {
-    line-height: 1.6;
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
 }
 
-/* Empty Adventure Section Height */
-section:last-of-type {
+.gallery figure {
+    text-align: center;
+}
+
+.gallery img {
+    width: 100%;
     height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    transition: transform 0.3s ease;
 }
 
-/* Footer */
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+figcaption {
+    margin-top: 0.75rem;
+    font-weight: bold;
+}
+
+/* ===== FOOTER ===== */
+
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     background-color: var(--secondary-color);
+
     color: white;
 
-    padding: 20px;
-    margin-top: 20px;
+    padding: 1.5rem 2rem;
+
+    margin-top: 2rem;
 }
 
-/* Social Media Icons */
+/* ===== SOCIAL MEDIA ===== */
+
 .socialmedia {
     display: flex;
-    gap: 15px;
-}
-
-.socialmedia a {
-    text-decoration: none;
+    gap: 1rem;
 }
 
 .socialmedia img {
-    width: 40px;
-    height: auto;
+    width: 36px;
+
+    transition: transform 0.3s ease;
+}
+
+.socialmedia img:hover {
+    transform: scale(1.15);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 768px) {
+
+    .site-header {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .navigation {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        height: auto;
+    }
+
+    .hero-content {
+        position: relative;
+    }
+
+    .hero article {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .history-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
 }

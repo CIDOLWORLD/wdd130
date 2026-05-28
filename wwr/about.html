@@ -8,7 +8,7 @@
     <title>About Us | White Water Rafting</title>
 
     <meta name="description"
-      content="Discover the story, mission, and adventures of White Water Rafting Company. Explore exciting rafting experiences and learn more about our team and history.">
+        content="Discover thrilling rafting adventures, our history, mission, and unforgettable outdoor experiences with White Water Rafting.">
 
     <meta name="author" content="Peter Ella Bisong">
 
@@ -17,76 +17,154 @@
 
 <body>
 
-    <header>
-        <img src="images/logo.png" alt="White Water Rafting Company Logo">
+    <!-- HEADER -->
+    <header class="site-header">
 
-        <nav>
-            <ul>
+        <img src="images/logo.png"
+            alt="White Water Rafting Logo"
+            class="logo">
+
+        <nav aria-label="Main Navigation">
+            <ul class="navigation">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
                 <li><a href="trips.html">Trips</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
+
     </header>
 
     <main>
 
-        <div class="hero">
-            <img src="images/hero.jpg" alt="People enjoying white water rafting adventure">
+        <!-- HERO SECTION -->
+        <section class="hero">
 
-            <h1>White Water Rafting</h1>
+            <img src="images/hero.jpg"
+                alt="People enjoying white water rafting"
+                class="hero-image"
+                loading="lazy">
 
-            <article>
-                <img src="images/happy-client.jpg" alt="Happy rafting client">
+            <div class="hero-content">
 
-                <p>
-                    At White Water Rafting, our mission is to provide exciting,
-                    safe, and unforgettable outdoor adventures for families,
-                    friends, and thrill-seekers. We believe in teamwork,
-                    exploration, and creating lasting memories through every
-                    river journey.
-                </p>
-            </article>
-        </div>
+                <h1>White Water Rafting</h1>
 
-        <section>
-            <h2>History</h2>
+                <article>
 
-            <p>
-                Founded with a passion for adventure and the outdoors,
-                White Water Rafting began as a small local business offering
-                guided rafting trips along scenic rivers. Over the years,
-                we have grown into a trusted rafting company known for
-                exceptional customer experiences, professional guides,
-                and exciting adventures for all skill levels.
-            </p>
+                    <p>
+                        At White Water Rafting, we create exciting, safe,
+                        and unforgettable outdoor adventures for families,
+                        friends, and thrill-seekers seeking the ultimate river experience.
+                    </p>
+
+                    <img src="images/happy-client.jpg"
+                        alt="Happy rafting customer"
+                        loading="lazy">
+
+                </article>
+
+            </div>
+
         </section>
 
-        <section>
+        <!-- HISTORY SECTION -->
+        <section class="history">
+
+            <h2>History</h2>
+
+            <div class="history-grid">
+
+                <p>
+                    Founded from a passion for adventure and nature,
+                    White Water Rafting started as a small local rafting
+                    company dedicated to unforgettable outdoor experiences.
+                </p>
+
+                <img src="images/history.png"
+                    alt="Historical rafting adventure"
+                    loading="lazy">
+
+                <p>
+                    Today, we are trusted for professional guides,
+                    safe adventures, and thrilling rafting experiences
+                    for beginners and experts alike.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- ADVENTURE GALLERY -->
+        <section class="gallery">
+
             <h2>Adventure Awaits You!</h2>
+
+            <div class="gallery-grid">
+
+                <figure>
+                    <img src="images/los-dientes.jpg"
+                        alt="Los Dientes rafting adventure"
+                        loading="lazy">
+                    <figcaption>Los Dientes</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/big-mallard.jpg"
+                        alt="Big Mallard rafting adventure"
+                        loading="lazy">
+                    <figcaption>Big Mallard</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/half-day.jpg"
+                        alt="Half Day rafting trip"
+                        loading="lazy">
+                    <figcaption>Half Day Adventure</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/full-day.jpg"
+                        alt="Full Day rafting trip"
+                        loading="lazy">
+                    <figcaption>Full Day Adventure</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/overnight.jpg"
+                        alt="Overnight rafting trip"
+                        loading="lazy">
+                    <figcaption>Overnight Adventure</figcaption>
+                </figure>
+
+            </div>
+
         </section>
 
     </main>
 
+    <!-- FOOTER -->
     <footer>
+
         <p>
             &copy; 2026 White Water Rafting | Peter Ella Bisong
         </p>
 
-        <nav class="socialmedia">
+        <nav class="socialmedia" aria-label="Social Media Links">
+
             <a href="https://facebook.com">
-                <img src="images/facebook.svg" alt="Facebook Icon">
+                <img src="images/facebook.svg" alt="Facebook">
             </a>
 
             <a href="https://linkedin.com">
-                <img src="images/linkedin.svg" alt="LinkedIn Icon">
+                <img src="images/linkedin.svg" alt="LinkedIn">
             </a>
 
             <a href="https://instagram.com">
-                <img src="images/instagram.svg" alt="Instagram Icon">
+                <img src="images/instagram.svg" alt="Instagram">
             </a>
+
         </nav>
+
     </footer>
 
 </body>
