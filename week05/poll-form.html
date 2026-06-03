@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WDD 130 | User Poll Form</title>
+
+    <meta name="description" content="User poll form collecting browser preferences and user information.">
+    <meta name="author" content="Xavier Rodriguez">
+
+    <link rel="stylesheet" href="styles/poll-form.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>User Poll Form</h1>
+    </header>
+
+    <main>
+        <form action="#" method="post">
+
+            <!-- Contact Information -->
+            <fieldset>
+                <legend>Contact Information</legend>
+
+                <div class="form-row">
+                    <label for="fullname">Full Name</label>
+                    <input
+                        type="text"
+                        id="fullname"
+                        name="fullname"
+                        autocomplete="name"
+                        required
+                    >
+                </div>
+
+                <div class="form-row">
+                    <label for="useremail">Email Address</label>
+                    <input
+                        type="email"
+                        id="useremail"
+                        name="useremail"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+            </fieldset>
+
+            <!-- Survey Questions -->
+            <fieldset>
+                <legend>Survey Questions</legend>
+
+                <div class="form-row">
+                    <label for="browser">
+                        What is your favorite internet browser?
+                    </label>
+
+                    <select id="browser" name="browser" required>
+                        <option value="" selected disabled>
+                            Select a browser
+                        </option>
+                        <option value="chrome">Chrome</option>
+                        <option value="firefox">Firefox</option>
+                        <option value="edge">Edge</option>
+                        <option value="safari">Safari</option>
+                        <option value="brave">Brave</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="checkbox-row">
+                    <span>Do you have a household pet?</span>
+
+                    <div class="checkbox-group">
+                        <input
+                            type="checkbox"
+                            id="pet"
+                            name="pet"
+                        >
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <label for="places">
+                        List the places you have lived:
+                    </label>
+
+                    <textarea
+                        id="places"
+                        name="places"
+                        rows="4"
+                        placeholder="Stillwater Florida, Amsterdam Netherlands, Tibuktu Mali""
+                    ></textarea>
+                </div>
+            </fieldset>
+
+            <button type="submit">
+                Submit Poll
+            </button>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>
+            &copy; 2026 | User Poll Activity | Xavier Rodriguez
+        </p>
+    </footer>
+
+</body>
+</html>
