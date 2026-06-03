@@ -10,7 +10,7 @@ body {
     font-family: Merriweather, Georgia, serif;
     background-color: #fff;
     color: #333;
-    font-size: 1.2rem;
+    font-size: 1.2em;
 }
 
 /* Header */
@@ -21,7 +21,7 @@ header {
 
 h1 {
     color: navy;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     text-align: center;
     margin: 1rem;
 }
@@ -50,7 +50,7 @@ fieldset {
 /* Legends */
 legend {
     color: navy;
-    font-size: 2rem;
+    font-size: 1.3em;
     padding: 0.5rem;
 }
 
@@ -63,6 +63,20 @@ legend {
     margin-bottom: 18px;
 }
 
+.form-item {
+  display: grid;
+  align-items: center;
+}
+
+.column1 {
+  grid-template-columns: 3fr 1fr;
+  margin: 0.5rem 0;
+}
+
+.column2 {
+  grid-template-columns: 1fr 2fr;
+}
+
 /* Labels */
 
 label, input, button, select, textarea {
@@ -71,7 +85,7 @@ label, input, button, select, textarea {
 
 label {
     text-align: right;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 /* Inputs */
@@ -143,7 +157,7 @@ button {
 }
 
 button:hover {
-    background-color: #001f7a;
+    background-color: darkgreen;
 }
 
 /* Footer */
